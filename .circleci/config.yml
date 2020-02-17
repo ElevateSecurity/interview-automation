@@ -1,0 +1,22 @@
+---
+version: 2.1
+version_tag: &version_tag >-
+  set -x; git rev-parse --short HEAD; set +x
+
+orbs:
+  aws-config: elevatesecurity/aws-config@0.1.4
+  docker-ecr: elevatesecurity/docker-ecr@0.1.4
+
+workflows:
+  commit:
+    jobs:
+      - build:
+          context: es-deployuser-aws
+
+jobs:
+  build:
+    executor: docker-ecr/default
+    steps:
+      - run:
+          name: NOOP
+          command: echo "NOPE"
