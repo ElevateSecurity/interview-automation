@@ -3,19 +3,4 @@
 # automatically as code reviewers
 #
 
-# Typical rules are as follow, where elevate_user1 and elevate_user2 are 2 SMEs
-
-# *              @elevate_user1 @elevate_user2
-# Dockerfile     @elevate_user1 @elevate_user2 @ElevateSecurity/prodeng
-# /.docker/      @elevate_user1 @elevate_user2 @ElevateSecurity/prodeng
-# /.circleci/    @elevate_user1 @elevate_user2 @ElevateSecurity/prodeng
-# /helm/         @elevate_user1 @elevate_user2 @ElevateSecurity/prodeng
-
-# Default rules in absence of specified SMEs
-
-Dockerfile     @ElevateSecurity/prodeng
-/.docker/      @ElevateSecurity/prodeng
-/.circleci/    @ElevateSecurity/prodeng
-/helm/         @ElevateSecurity/prodeng
-
-
+*    @ElevateSecurity/prodeng
