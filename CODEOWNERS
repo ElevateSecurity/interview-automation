@@ -1,0 +1,6 @@
+#
+# Sets the default owner for all pull requests and ensures that they are added
+# automatically as code reviewers
+#
+
+*    @ElevateSecurity/prodeng
